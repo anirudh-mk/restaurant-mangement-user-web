@@ -1,0 +1,53 @@
+.screenContainer>img {
+    width: 100%;
+    height: 412px;
+    border-bottom-right-radius: 40px;
+    object-fit: cover;
+}
+
+.headdingTopContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px 5px;
+}
+
+.headdingBottomContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 16px 10px;
+}
+
+.iconBackground {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.descriptionContainer>p {
+    padding: 16px 16px 0px 16px;
+    text-align: justify;
+    color: gray;
+}
+
+.more>p {
+    padding-left: 16px;
+    padding-bottom: 16px;
+}
+
+.screenContainer>h2 {
+    padding-left: 16px;
+}
+
+.ingridientsContainer {
+    padding: 0px 16px 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ingridients {
+    background-color: #f7f7f7;
+    margin: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
