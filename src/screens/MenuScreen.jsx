@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import '../App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import MenuCard from '../components/MenuCard'
-import ImageCard from '../components/ImageCard'
-import ImageCardLarge from '../components/ImageCardLarge'
+import React, { useEffect, useState } from 'react';
+import '../App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import MenuCard from '../components/MenuCard';
+import ImageCard from '../components/ImageCard';
+import ImageCardLarge from '../components/ImageCardLarge';
+import { Outlet } from 'react-router-dom';
 
 function MenuScreen() {
-    const menuItems = ["juice", "chicken", "all", "beef", "veg", "non veg", "aapled"]
+    const menuItems = ["juice", "chicken", "all", "beef", "veg", "non veg", "aapled"];
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
@@ -25,6 +26,7 @@ function MenuScreen() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     return (
         <>
             <div className="headdingContainer">
@@ -33,30 +35,30 @@ function MenuScreen() {
             </div>
             <div id="myHeader" className={`header ${isSticky ? 'sticky' : ''}`}>
                 <div className='inputContainer'>
-                    <input type="text" />
+                    <input type="text" placeholder="Search..." />
                 </div>
                 <div className="horizontalScrollContainer">
-                    {
-                        menuItems.map((items) => <MenuCard title={items} />)
-                    }
+                    {menuItems.map((item, index) => (
+                        <MenuCard key={index} title={item} />
+                    ))}
                 </div>
             </div>
             <div className='verticalScrollContainer'>
                 <h2>Popular</h2>
                 <div className="horizontalScrollContainer">
-                    {
-                        menuItems.map((items) => <ImageCard />)
-                    }
+                    {menuItems.map((item, index) => (
+                        <ImageCard key={index} title={item} />
+                    ))}
                 </div>
                 <h2>Menu</h2>
                 <div className='menuItems'>
-                    {
-                        menuItems.map((items) => <ImageCardLarge />)
-                    }
+                    {menuItems.map((item, index) => (
+                        <ImageCardLarge key={index} title={item} />
+                    ))}
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default MenuScreen
+export default MenuScreen;

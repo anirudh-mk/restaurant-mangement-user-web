@@ -1,11 +1,21 @@
-import React from 'react'
-import MenuScreen from '../src/screens/MenuScreen.jsx'
-function App() {
-  return (
-    <>
-      <MenuScreen />
-    </>
-  )
-}
+import React from 'react';
+import { createBrowserRouter } from 'react-router-dom';
+import MenuScreen from '../src/screens/MenuScreen';
+import FoodScreen from './screens/FoodScreen';
 
-export default App
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+  {
+    path: 'restaurant/:id',
+    element: <MenuScreen />,
+  },
+  {
+    path: 'restaurant/:id/food/:foodId',
+    element: <FoodScreen />,
+  },
+]);
+
+export default router;
