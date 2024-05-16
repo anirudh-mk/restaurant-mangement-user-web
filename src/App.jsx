@@ -7,7 +7,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <div>Hello world!
-      <Link to={'restaurant/:id'} >Got to</Link>
+      <Link to={'restaurant/1'} >Got to</Link>
     </div>,
   },
   {
