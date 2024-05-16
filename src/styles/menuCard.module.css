@@ -1,0 +1,16 @@
+.menuCard {
+    text-align: center;
+    width: 55px;
+}
+
+
+.menuCard>img {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+}
+
+.menuCard>p {
+    overflow: hidden;
+    color: #8896A4;
+}

@@ -5,7 +5,6 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import MenuCard from '../components/MenuCard';
 import ImageCard from '../components/ImageCard';
 import ImageCardLarge from '../components/ImageCardLarge';
-import { Outlet } from 'react-router-dom';
 
 function MenuScreen() {
     const menuItems = ["juice", "chicken", "all", "beef", "veg", "non veg", "aapled"];
