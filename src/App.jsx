@@ -1,12 +1,14 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+import { Link, createBrowserRouter } from 'react-router-dom';
 import MenuScreen from '../src/screens/MenuScreen';
 import FoodScreen from './screens/FoodScreen';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <div>Hello world!
+      <Link to={'restaurant/:id'} >Got to</Link>
+    </div>,
   },
   {
     path: 'restaurant/:id',
