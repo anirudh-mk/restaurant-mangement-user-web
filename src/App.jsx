@@ -1,23 +1,18 @@
 import React from 'react';
-import { Link, createBrowserRouter } from 'react-router-dom';
 import MenuScreen from '../src/screens/MenuScreen';
 import FoodScreen from './screens/FoodScreen';
+import { Route, Router, Routes } from 'react-router-dom';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!
-      <Link to={'restaurant/:id'} >Got to</Link>
-    </div>,
-  },
-  {
-    path: 'restaurant/:id',
-    element: <MenuScreen />,
-  },
-  {
-    path: 'restaurant/:id/food/:foodId',
-    element: <FoodScreen />,
-  },
-]);
 
-export default router;
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path='restaurant/:id' element={<MenuScreen />} />
+        <Route path='restaurant/:id/food/:id' element={<FoodScreen />} />
+      </Routes>
+    </>
+  )
+}
+
+export default App

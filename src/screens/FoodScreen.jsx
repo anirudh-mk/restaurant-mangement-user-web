@@ -6,7 +6,7 @@ import ImageCard from '../components/ImageCard';
 function FoodScreen() {
 
     const menuItems = ["juice", "chicken", "all", "beef", "veg", "non veg", "aapled"];
-    const [showMore, setShowMore] = useState(false)
+    const [showMore, setShowMore] = useState(true)
 
     return (
         <div className={style.screenContainer}>
