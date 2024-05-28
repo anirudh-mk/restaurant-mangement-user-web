@@ -11,6 +11,11 @@
     object-fit: cover;
 }
 
+.headdingTopContainer>p {
+    width: 70px;
+    overflow: hidden;
+}
+
 .headdingTopContainer {
     display: flex;
     justify-content: space-between;
